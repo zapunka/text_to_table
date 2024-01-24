@@ -1,0 +1,17 @@
+[Unit]
+Description=TEXT TO TABLE BOT
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Environment="BOT_TOKEN=6606128801:AAHO9vpGQzWxfx1zMTqUeqofYFBEaGLdbzc"
+
+WorkingDirectory=/home/text_to_table
+ExecStart=/usr/bin/python3 /home/text_to_table/bot.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
